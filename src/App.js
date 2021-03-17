@@ -1,16 +1,19 @@
-import './App.css';
-import Home from './components/pages/Home.js';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-
+import React from 'react';
+import GlobalStyle from './globalStyles';
+import Home from './pages/HomePage/Home';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Navbar, Footer } from './components';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <GlobalStyle />
       <Navbar />
-      <Home></Home>
+      <Switch>
+        <Route path='/' exact component={Home} />
+      </Switch>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
