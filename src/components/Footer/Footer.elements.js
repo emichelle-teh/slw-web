@@ -56,25 +56,30 @@ export const FooterLinkTitle = styled.h2`
 export const FooterLink = styled.p`
   color: #fff;
   text-decoration: none;
-  margin-bottom: 0.5rem;
+  padding: 0.5rem;
   width: 85%;
   word-wrap: break-word;
 `;
 
 export const WebsiteRights = styled.small`
-  color: #fff;
-  margin-bottom: 16px;
+  margin: 0.5rem;
+  font-size: 1rem;
 `;
 
 export const SocialIcons = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
-  width: 240px;
+  width: 15rem;
+  @media screen and (max-width: 820px) {
+    display: inline-block;
+    width: 5rem;
+  } */
 `;
 
 export const SocialIconLink = styled.a`
   color: #fff;
-  font-size: 24px;
+  font-size: 2rem;
+  padding: 0.5rem;
 `;

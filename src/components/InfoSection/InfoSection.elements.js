@@ -20,9 +20,9 @@ export const InfoColumn = styled.div`
   flex-basis: 50%;
   justify-content: center;
   @media screen and (max-width: 768px) {
+    display: inline-block;
     max-width: 100%;
     flex-basis: 100%;
-    display: flex;
     justify-content: center;
   }
 `;

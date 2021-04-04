@@ -16,8 +16,9 @@ export const PartnerSec = styled.div`
 
 export const Headline = styled.h1`
   color: #242424;
-  font-size: 64px;
+  font-size: 2rem;
   margin-bottom: 24px;
+  
 `;
 
 export const LogoContainer = styled.div`
