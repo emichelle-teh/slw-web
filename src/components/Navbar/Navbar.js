@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import { Button } from '../../globalStyles';
+import { Button_1 } from '../../globalStyles';
 import {
   Nav,
   NavbarContainer,
   NavLogo,
-  NavIcon,
   MobileIcon,
   NavMenu,
   NavItem,
@@ -38,12 +37,11 @@ function Navbar() {
 
   return (
     <>
-      <IconContext.Provider value={{ color: '#242424' }}>
+      <IconContext.Provider value={{ color: '#002FA6' }}>
         <Nav>
           <NavbarContainer>
             <NavLogo to='/' onClick={closeMobileMenu}>
-              <NavIcon />
-              Self Love Warrior
+              self love warrior
             </NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
@@ -51,7 +49,7 @@ function Navbar() {
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to='/' onClick={closeMobileMenu}>
-                  About Us
+                  Home
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -67,13 +65,15 @@ function Navbar() {
               <NavItemBtn>
                 {button ? (
                   <NavBtnLink to='/donate'>
-                    <Button primary>DONATE</Button>
+                    <Button_1 primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
+                      DONATE
+                    </Button_1>
                   </NavBtnLink>
                 ) : (
                   <NavBtnLink to='/donate'>
-                    <Button onClick={closeMobileMenu} fontBig primary>
+                    <Button_1 onClick={closeMobileMenu} primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
                       DONATE
-                    </Button>
+                    </Button_1>
                   </NavBtnLink>
                 )}
               </NavItemBtn>

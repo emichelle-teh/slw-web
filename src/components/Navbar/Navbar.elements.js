@@ -7,6 +7,7 @@ export const Nav = styled.nav`
   background: #fff;
   height: 80px;
   display: flex;
+  box-shadow: 0px 7px 23px rgba(71, 15, 15, 0.25);
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
@@ -24,17 +25,14 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavLogo = styled(Link)`
-  color: #242424;
+  color: #002FA6;
+  font-family: 'Abril Fatface';
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
   display: flex;
   align-items: center;
-`;
-
-export const NavIcon = styled(FaMagento)`
-  margin-right: 0.5rem;
 `;
 
 export const MobileIcon = styled.div`
@@ -99,8 +97,10 @@ export const NavItemBtn = styled.li`
 `;
 
 export const NavLinks = styled(Link)`
-  color: #242424;
+  color: #3858CC;
   display: flex;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
