@@ -64,7 +64,7 @@ export const CardHeadline = styled.h3`
   letter-spacing: 0.01em;
   height: 5rem;
 `;
-export const CardDesc = styled.ul`
+export const CardDesc = styled.div`
   color: #FFFFFF;
   list-style: none;
   display: flex;

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import CardCom from '../CardCom/CardCom';
-import { cardsComData } from '../../pages/HomePage/Data';
+import { cardsComData } from '../../pages/Home/Data';
 import {
   ComSec,
   ComWrapper,
@@ -26,4 +26,4 @@ function Community({headline}) {
     )
 };
 
-export default Community;
+export default memo(Community);

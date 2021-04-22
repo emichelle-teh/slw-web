@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.div`
   background-color: #000060;//kalo pake warna ini lebih bagus-> #101522

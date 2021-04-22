@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Button_2 } from '../../globalStyles';
+import { Container, Button2 } from '../../globalStyles';
 import {
   CoverSec,
   CoverColumn,
@@ -10,9 +10,6 @@ import {
 } from './Cover.elements';
 
 function Cover({
-  primary,
-  lightText,
-  lightTextDesc,
   headline,
   description,
   buttonLabel,
@@ -23,12 +20,12 @@ function Cover({
           <Container>
               <CoverColumn>
                 <TextWrapper>
-                  <Heading lightText={lightText}>{headline}</Heading>
-                  <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+                  <Heading>{headline}</Heading>
+                  <Subtitle>{description}</Subtitle>
                   <Link to='/'>
-                    <Button_2 primary={primary} colLabel={true} btnBorder={true} btnPadding={false} fontSize={true}>
+                    <Button2 primary={true} colLabel={true} btnBorder={true} btnPadding={false} fontSize={true}>
                       {buttonLabel}
-                    </Button_2>
+                    </Button2>
                   </Link>
                 </TextWrapper>
               </CoverColumn>
@@ -38,4 +35,4 @@ function Cover({
   );
 }
 
-export default Cover;
+export default memo(Cover);

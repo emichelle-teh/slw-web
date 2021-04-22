@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import CardProg from '../CardProg/CardProg';
-import { cardsProgData } from '../../pages/HomePage/Data';
+import { cardsProgData } from '../../pages/Home/Data';
 import {
     ProgSec,
     ProgWrapper,
@@ -26,4 +26,4 @@ function Programs({headline, subtitle}) {
     )
 }
 
-export default Programs
+export default memo(Programs);

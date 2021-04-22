@@ -17,8 +17,8 @@ export const Container = styled.div`
   padding-right: 20px;
   padding-left: 20px;
 `;
-
-export const Button_1 = styled.button`
+//For Navbar and Community Seciton
+export const Button1 = styled.button`
   font-family: Poppins;
   font-style: normal;
   font-weight: 600;
@@ -48,23 +48,23 @@ export const Button_1 = styled.button`
   }
 `;
 //For Cover & Statistic Section
-export const Button_2 = styled.button`
+export const Button2 = styled.button`
   border-radius: 12px;
   white-space: nowrap;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   background-color: ${({ primary }) => (primary ? '#fff' : 'transparent')};
   color: ${({ colLabel }) => (colLabel ? '#CE1A3A' : '#fff')};
-  border: ${({ btnBorder }) => (btnBorder ? 'none' : 'none')};
-  padding: ${({ btnPadding }) => ((btnPadding ? '4px 21px' : '12px 34px'))};
+  border: ${({ btnBorder }) => (btnBorder ? 'none' : '2px solid #DB303B')};
+  padding: ${({ btnPadding }) => ((btnPadding ? '4px 21px' : '10px 34px'))};
   font-size: ${({ fontSize }) => (fontSize ? '18px' : '16px')};
   outline: none;
   cursor: pointer;
   
   &:hover {
-    transition: all 0.2s ease-out;
     background-color: ${({ primary }) => (primary ? '#EF5D5D' : '#fff')};
     color: ${({ colLabel }) => (colLabel ? '#fff' : '#CE1A3A')};
+    border: ${({ btnBorder }) => (btnBorder ? 'none' : 'none')};
     padding: ${({ btnPadding }) => ((btnPadding ? '4px 21px' : '12px 34px'))};
   }
 
@@ -73,7 +73,7 @@ export const Button_2 = styled.button`
   }
 `;
 //For Information Section
-export const Button_3 = styled.button`
+export const Button3 = styled.button`
   border-radius: 12px;
   white-space: nowrap;
   font-family: 'Poppins', sans-serif;

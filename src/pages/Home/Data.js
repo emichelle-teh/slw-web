@@ -5,12 +5,11 @@ import programImg3 from '../../images/Program-Img-3.png';
 import statisticsImg1 from '../../images/Statistics-Img-1.png';
 import statisticsImg2 from '../../images/Statistics-Img-2.png';
 
+import imageLogo from '../../images/test-logo.png';
+
 import infoImg from '../../images/White.png';
 
 export const coverObj = {
-  primary: true,
-  lightText: true,
-  lightTextDesc: true,
   headline: 'Self Love Warrior Indonesia',
   description: 'Spreading mental health awaraness and self-love in Indonesia.',
   buttonLabel: 'Get Involed',
@@ -80,6 +79,45 @@ export const statisticsObjTwo = {
     width:'384',
     height:'381',
 }
+
+export const partnerObj = {
+    headline:'See our past collaborations',
+    buttonLabel:'Collaborate with us',
+}
+
+export const partnerLogo = [
+    {
+        id: 1,
+        logoName: 'Image-1',
+        imageUrl: imageLogo,
+    },
+    {
+        id: 2,
+        logoName: 'Image-2',
+        imageUrl: imageLogo,
+    },
+    {
+        id: 3,
+        logoName: 'Image-3',
+        imageUrl:imageLogo,
+    },
+    {
+        id: 4,
+        logoName: 'Image-4',
+        imageUrl:imageLogo,
+    },
+    {
+        id: 5,
+        logoName: 'Image-5',
+        imageUrl:imageLogo,
+    },
+    {
+        id: 6,
+        logoName: 'Image-6',
+        imageUrl:imageLogo,
+    },
+];
+
 
 export const communityObj = {
     headline: 'Be a Self Love Warrior!',

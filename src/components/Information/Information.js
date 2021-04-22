@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Button_3 } from '../../globalStyles';
+import { Container, Button3 } from '../../globalStyles';
 import {
     InfoSec,
     InfoRow,
@@ -32,16 +32,16 @@ function Infrormation({
                             </TextWrapper>
                             <BtnCollumn>
                             <Link to='/contact-us'>
-                                <Button_3 primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
+                                <Button3 primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
                                     {buttonLabel1}
-                                </Button_3>
+                                </Button3>
                             </Link>
                             </BtnCollumn>
                             <BtnCollumn>
                             <Link to='/newsletter'>
-                                <Button_3 primary={false} colLabel={false} btnBorder={false} btnPadding={false} fontSize={false}>
+                                <Button3 primary={false} colLabel={false} btnBorder={false} btnPadding={false} fontSize={false}>
                                     {buttonLabel2}
-                                </Button_3>
+                                </Button3>
                             </Link>
                             </BtnCollumn>
                         </InfoColumn>
@@ -55,4 +55,4 @@ function Infrormation({
     );
 }
 
-export default Infrormation;
+export default memo(Infrormation);

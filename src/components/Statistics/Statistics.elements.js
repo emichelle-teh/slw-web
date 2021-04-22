@@ -17,7 +17,6 @@ export const Headline = styled.h1`
 export const StatisticsRow = styled.div`
   padding: 60px 10px;
   display: flex;
-  /* margin: 0 -15px -15px -15px; */
   flex-wrap: wrap;
   align-items: center;
   flex-direction: ${({ colPosition }) => (colPosition ? 'row-reverse' : 'row')};
@@ -46,29 +45,6 @@ export const TextWrapper = styled.div`
   }
 `;
 
-export const ImgWrapper = styled.div`
-  max-width: 555px;
-  display: flex;
-  justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
-`;
-
-export const Img = styled.img`
-  padding-right: 0;
-  border: 0;
-  vertical-align: middle;
-  display: inline-block;
-  height: auto; 
-  width: auto; 
-  max-width: 500px; 
-  max-height: 500px;
-  @media screen and (max-width: 768px) {
-    max-width: 200px; 
-    max-height: 200px;
-    
-  }
-`;
-
-
 export const Heading = styled.h1`
   font-family: Nunito;
   font-style: normal;
@@ -89,4 +65,26 @@ export const Subtitle = styled.p`
   line-height: 172.3%;
   letter-spacing: 0.01em;
   color: rgba(219, 48, 59, 0.91);
+`;
+
+export const ImgWrapper = styled.div`
+  max-width: 555px;
+  display: flex;
+  justify-content: ${({ start }) => (start ? 'flex-start' : 'flex-end')};
+`;
+
+export const Img = styled.img`
+  padding-right: 0;
+  border: 0;
+  vertical-align: middle;
+  display: inline-block;
+  height: auto; 
+  width: auto; 
+  max-width: 500px; 
+  max-height: 500px;
+  @media screen and (max-width: 768px) {
+    max-width: 200px; 
+    max-height: 200px;
+    
+  }
 `;

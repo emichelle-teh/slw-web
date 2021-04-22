@@ -48,7 +48,7 @@ export const CardHeadline = styled.h3`
   margin-top: 7rem;
   margin-bottom: 0.2rem;
 `;
-export const CardDesc = styled.ul`
+export const CardDesc = styled.div`
   width: 90%;
   color: #FFFFFF;
   list-style: none;

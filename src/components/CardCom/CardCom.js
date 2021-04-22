@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { Link } from 'react-router-dom';
-import { Button_1 } from '../../globalStyles';
+import { Button1 } from '../../globalStyles';
 import {
   CardSec,
   CardInfo,
@@ -25,9 +25,9 @@ const CardCom = ({ cards }) => {
                                 <CardText>{cardTextDesc}</CardText>
                                 <CardButton>
                                     <Link to='/'>
-                                    <Button_1 primary={false} colLabel={false} btnBorder={false} btnPadding={false} fontSize={false}>
+                                    <Button1 primary={false} colLabel={false} btnBorder={false} btnPadding={false} fontSize={false}>
                                         {buttonLabel}
-                                    </Button_1>
+                                    </Button1>
                                     </Link>
                                 </CardButton>
                             </CardDesc>
@@ -39,4 +39,4 @@ const CardCom = ({ cards }) => {
     );
 };
 
-export default CardCom;
+export default memo(CardCom);

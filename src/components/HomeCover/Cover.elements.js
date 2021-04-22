@@ -50,7 +50,7 @@ export const Heading = styled.h1`
   font-size: 68px;
   line-height: 98.8%;
   width: 75%;
-  color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#1c2237')};
+  color: #f7f8fa;
 
   @media screen and (max-width: 860px) {
     font-size: 50px;
@@ -76,7 +76,7 @@ export const Subtitle = styled.p`
 
   font-family: 'Poppins', sans-serif;
   word-wrap: break-word;
-  color: ${({ lightTextDesc }) => (lightTextDesc ? '#fff' : '#1c2237')};
+  color: #fff;
 
   @media screen and (max-width: 768px) {
     font-size: 1rem;

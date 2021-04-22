@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ComSec = styled.div`
-  padding: 160px 0;
+  padding: 0px 0px 160px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;

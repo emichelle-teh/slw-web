@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import { Button_1 } from '../../globalStyles';
+import { Button1 } from '../../globalStyles';
 import {
   Nav,
   NavbarContainer,
@@ -53,8 +53,8 @@ function Navbar() {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/programs' onClick={closeMobileMenu}>
-                  Programs
+                <NavLinks to='/about-us' onClick={closeMobileMenu}>
+                  About Us
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -65,15 +65,15 @@ function Navbar() {
               <NavItemBtn>
                 {button ? (
                   <NavBtnLink to='/donate'>
-                    <Button_1 primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
+                    <Button1 primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
                       DONATE
-                    </Button_1>
+                    </Button1>
                   </NavBtnLink>
                 ) : (
                   <NavBtnLink to='/donate'>
-                    <Button_1 onClick={closeMobileMenu} primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
+                    <Button1 onClick={closeMobileMenu} primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
                       DONATE
-                    </Button_1>
+                    </Button1>
                   </NavBtnLink>
                 )}
               </NavItemBtn>
@@ -85,4 +85,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default memo(Navbar);

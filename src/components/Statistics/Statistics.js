@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { Container } from '../../globalStyles';
 import {
     StatisticsSec,
@@ -50,4 +50,4 @@ function Statistics({
     )
 }
 
-export default Statistics;
+export default memo(Statistics);
