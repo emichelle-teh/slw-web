@@ -1,6 +1,6 @@
 import React, {memo} from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Button2 } from '../../../globalStyles';
+import { Container, Button3 } from '../../../globalStyles';
 import {
   CoverSec,
   CoverColumn,
@@ -23,9 +23,9 @@ function Cover({
                   <Heading>{headline}</Heading>
                   <Subtitle>{description}</Subtitle>
                   <Link to='/'>
-                    <Button2 primary={true} colLabel={true} btnBorder={true} btnPadding={false} fontSize={true}>
+                    <Button3 primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
                       {buttonLabel}
-                    </Button2>
+                    </Button3>
                   </Link>
                 </TextWrapper>
               </CoverColumn>

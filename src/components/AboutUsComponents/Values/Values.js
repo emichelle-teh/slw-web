@@ -1,10 +1,10 @@
 import React, {memo, useState} from 'react';
 import { Container } from '../../../globalStyles';
 import {
-    ValuesSec,
-    ValuesHeader,
-    ValuesHeadline,
-    HeadlineUnderline,
+    BaseSection,
+    Headline,
+    UnderlineContainer,
+    Underline,
     CardContainer,
     CardSec,
     CardInfo,
@@ -21,12 +21,12 @@ const Values = ( {valuesTitle, valuesData} ) => {
     const [cards] = useState(valuesData);
     return (
         <>
-            <ValuesSec>
+            <BaseSection>
                 <Container>
-                    <ValuesHeadline>{valuesTitle}</ValuesHeadline>
-                    <ValuesHeader>
-                        <HeadlineUnderline></HeadlineUnderline>
-                    </ValuesHeader>
+                    <Headline>{valuesTitle}</Headline>
+                    <UnderlineContainer>
+                        <Underline></Underline>
+                    </UnderlineContainer>
                     <CardContainer>
                     {cards.map((valueData) => {
                     const { id, imageUrl, imageName, cardTitle, cardDesc } = valueData;
@@ -48,7 +48,7 @@ const Values = ( {valuesTitle, valuesData} ) => {
                     })}
                     </CardContainer>
                 </Container>
-            </ValuesSec>
+            </BaseSection>
         </>
     )
 }

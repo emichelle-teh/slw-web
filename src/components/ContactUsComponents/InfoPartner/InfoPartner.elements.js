@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const InfoPartnerSec = styled.div`
+export const BaseSection = styled.div`
     padding: 100px 0;
     background: #FFD6D6;
     border-radius: 60px 60px 0px 0px;
@@ -27,7 +27,7 @@ export const Paragraph = styled.p`
     color: #091F6B;
     margin-bottom: 2rem;
 `;
-export const InfoWrapper = styled.div`
+export const Wrapper = styled.div`
     align-items: center;
     text-align: center;
     margin-bottom: 2rem;

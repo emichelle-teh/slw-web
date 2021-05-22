@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ValuesSec = styled.div`
+export const BaseSection = styled.div`
     padding: 100px 0;
     display: flex;
     flex-direction: column;
@@ -9,13 +9,7 @@ export const ValuesSec = styled.div`
     background: #FFF2E7;
 `;
 
-export const ValuesHeader = styled.div`
-    justify-content: center;
-    align-items: center;
-    display: flex;
-`;
-
-export const ValuesHeadline = styled.h1`
+export const Headline = styled.h1`
     font-family: Nunito;
     font-style: normal;
     font-weight: 800;
@@ -24,7 +18,14 @@ export const ValuesHeadline = styled.h1`
     letter-spacing: 0.01em;
     color: #091F6B;
 `;
-export const HeadlineUnderline = styled.div`
+
+export const UnderlineContainer = styled.div`
+    justify-content: center;
+    align-items: center;
+    display: flex;
+`;
+
+export const Underline = styled.div`
     width: 100px;
     height: 10px;
     background-color: #FFCCCC;

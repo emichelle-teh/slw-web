@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const ContactFormSec = styled.div`
+export const BaseSection = styled.div`
     padding: 160px 0;
     background: #fff;
 `;
 
-export const FormHeadline = styled.h1`
+export const Headline = styled.h1`
     font-family: Nunito;
     font-style: normal;
     font-weight: 800;
@@ -17,7 +17,7 @@ export const FormHeadline = styled.h1`
     margin-bottom: 2rem;
 `;
 
-export const FormWrapper = styled.div`
+export const Wrapper = styled.div`
     align-items: center;
     text-align: center;
     margin-bottom: 2rem;
