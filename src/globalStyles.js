@@ -17,30 +17,28 @@ export const Container = styled.div`
   padding-right: 20px;
   padding-left: 20px;
 `;
-//For Navbar and Community Seciton
+
 export const Button1 = styled.button`
-  font-family: Poppins;
+  font-family: Nunito;
   font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.04em;
-  border-radius: 4px;
-  white-space: nowrap;
-  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  line-height: 135.94%;
   background-color: ${({ primary }) => (primary ? '#3858CC' : 'transparent')};
-  color: ${({ colLabel }) => (colLabel ? '#fff' : '#FFD6D0')};
-  border: ${({ btnBorder }) => (btnBorder ? 'none' : '1px solid #FFD6D0')};
-  padding: ${({ btnPadding }) => ((btnPadding ? '11px 34px' : '4px 21px'))};
-  font-size: ${({ fontSize }) => (fontSize ? '20px' : '12px')};
+  color: ${({ colLabel }) => (colLabel ? '#FFFFFF' : '#4962BB')};
+  border: ${({ btnBorder }) => (btnBorder ? '2px solid #3858CC' : '2px solid #4962BB')};
+  padding: ${({ btnPadding }) => ((btnPadding ? '10px 34px' : '10px 34px'))};
+  font-size: ${({ fontSize }) => (fontSize ? '18px' : '18px')};
+  border-radius: 100px;
+  width: 400px;
+  white-space: nowrap;
   outline: none;
   cursor: pointer;
   
   &:hover {
     transition: all 0.3s ease-out;
-    background-color: ${({ primary }) => (primary ? '#fff' : 'transparent')};
-    color: ${({ colLabel }) => (colLabel ? '#3858CC' : 'none')};
-    border: ${({ btnBorder }) => (btnBorder ? 'none' : 'none')};
+    background-color: ${({ primary }) => (primary ? 'transparent' : '#3858CC')};
+    color: ${({ colLabel }) => (colLabel ? '#4962BB' : '#FFFFFF')};
+    border: ${({ btnBorder }) => (btnBorder ? '2px solid #4962BB' : '2px solid #3858CC')};
   }
 
   @media screen and (max-width: 960px) {
@@ -49,23 +47,27 @@ export const Button1 = styled.button`
 `;
 //For Cover & Statistic Section
 export const Button2 = styled.button`
-  border-radius: 12px;
-  white-space: nowrap;
+  font-family: Nunito;
+  font-style: normal;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-  background-color: ${({ primary }) => (primary ? '#fff' : 'transparent')};
-  color: ${({ colLabel }) => (colLabel ? '#CE1A3A' : '#fff')};
-  border: ${({ btnBorder }) => (btnBorder ? 'none' : '2px solid #DB303B')};
-  padding: ${({ btnPadding }) => ((btnPadding ? '4px 21px' : '10px 34px'))};
-  font-size: ${({ fontSize }) => (fontSize ? '18px' : '16px')};
+  line-height: 135.94%;
+  background-color: ${({ primary }) => (primary ? '#FF565E' : 'none')};
+  color: ${({ colLabel }) => (colLabel ? '#FFFFFF' : 'none')};
+  border: ${({ btnBorder }) => (btnBorder ? '2px solid #FF565E' : 'none')};
+  padding: ${({ btnPadding }) => ((btnPadding ? '10px 34px' : 'none'))};
+  font-size: ${({ fontSize }) => (fontSize ? '18px' : 'none')};
+  border-radius: 100px;
+  width: 200px;
+  white-space: nowrap;
   outline: none;
   cursor: pointer;
   
   &:hover {
-    background-color: ${({ primary }) => (primary ? '#EF5D5D' : '#fff')};
-    color: ${({ colLabel }) => (colLabel ? '#fff' : '#CE1A3A')};
-    border: ${({ btnBorder }) => (btnBorder ? 'none' : 'none')};
-    padding: ${({ btnPadding }) => ((btnPadding ? '4px 21px' : '12px 34px'))};
+    box-sizing: border-box;
+    background-color: ${({ primary }) => (primary ? 'transparent' : 'none')};
+    color: ${({ colLabel }) => (colLabel ? '#FF866B' : 'none')};
+    border: ${({ btnBorder }) => (btnBorder ? '2px solid #FF866B' : 'none')};
+    padding: ${({ btnPadding }) => ((btnPadding ? '10px 34px' : 'none'))};
   }
 
   @media screen and (max-width: 960px) {
@@ -74,27 +76,41 @@ export const Button2 = styled.button`
 `;
 //For Information Section
 export const Button3 = styled.button`
-  border-radius: 12px;
-  white-space: nowrap;
-  font-family: 'Poppins', sans-serif;
+  font-family: Nunito;
   font-style: normal;
-  font-weight: 600;
-  align-items: center;
-  text-align: center;
-  background-color: ${({ primary }) => (primary ? '#EF5D5D' : 'transparent')};
-  color: ${({ colLabel }) => (colLabel ? '#fff' : '#EF5D5D')};
-  border: ${({ btnBorder }) => (btnBorder ? 'none' : '2px solid #EF5D5D')};
-  padding: ${({ btnPadding }) => ((btnPadding ? '12px 64px' : '10px 32px'))};
-  font-size: ${({ fontSize }) => (fontSize ? '16px' : '16px')};
+  font-weight: bold;
+  line-height: 135.94%;
+  background-color: ${({ primary }) => (primary ? '#3858CC' : '#FFFFFF')};
+  color: ${({ colLabel }) => (colLabel ? '#FFFFFF' : '#091F6B')};
+  border: ${({ btnBorder }) => (btnBorder ? '2px solid #3858CC' : '2px solid #FFFFFF')};
+  padding: ${({ btnPadding }) => ((btnPadding ? '10px 34px' : '10px 34px'))};
+  font-size: ${({ fontSize }) => (fontSize ? '18px' : '18px')};
+  border-radius: 100px;
+  width: auto;
+  white-space: nowrap;
   outline: none;
   cursor: pointer;
 
-  &:hover {
-    background-color: ${({ primary }) => (primary ? 'transparent' : '#EF5D5D')};
-    color: ${({ colLabel }) => (colLabel ? '#EF5D5D' : '#fff')};
-    border: ${({ primary }) => (primary ? '2px solid #EF5D5D' : 'none')};
-    padding: ${({ btnPadding }) => ((btnPadding ? '10px 62px' : '12px 34px'))};
+  @media screen and (max-width: 960px) {
+    width: 100%;
   }
+`;
+
+export const Button4 = styled.button`
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 170.3%;
+  background-color: ${({ primary }) => (primary ? '#6C8FFF' : 'none')};
+  color: ${({ colLabel }) => (colLabel ? '#FFFFFF' : 'none')};
+  border: ${({ btnBorder }) => (btnBorder ? '2px solid #6C8FFF' : 'none')};
+  padding: ${({ btnPadding }) => ((btnPadding ? '10px 34px' : 'none'))};
+  font-size: ${({ fontSize }) => (fontSize ? '13px' : 'none')};
+  border-radius: 12px;
+  width: auto;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
 
   @media screen and (max-width: 960px) {
     width: 100%;

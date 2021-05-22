@@ -24,8 +24,11 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavLogo = styled(Link)`
-  color: #002FA6;
-  font-family: 'Abril Fatface';
+  font-family: Abril Fatface;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 87.9%;
+  color: #001A49;
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
@@ -64,42 +67,38 @@ export const NavMenu = styled.ul`
     left: ${({ click }) => (click ? 0 : '-100%')};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #fff;
+    background: #FFF1E5;
   }
 `;
 
 export const NavItem = styled.li`
   height: 80px;
   border-bottom: 2px solid transparent;
-
+  
   &:hover {
     border-bottom: 2px solid #4b59f7;
   }
 
   @media screen and (max-width: 960px) {
     width: 100%;
-
+    border-top: 1px solid #F49790;
+    border-bottom: 1px solid #F49790;
+    
     &:hover {
       border: none;
+      background: rgba(255, 204, 204, 0.5);
     }
   }
 `;
 
-export const NavItemBtn = styled.li`
-  @media screen and (max-width: 960px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 120px;
-  }
-`;
-
 export const NavLinks = styled(Link)`
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 115.2%;
   color: #3858CC;
   display: flex;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -107,25 +106,14 @@ export const NavLinks = styled(Link)`
 
   @media screen and (max-width: 960px) {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     width: 100%;
     display: table;
-
+    color: #FF565E;
+    text-align: left;
     &:hover {
-      color: #4b59f7;
       transition: all 0.3s ease;
+      
     }
   }
-`;
-
-export const NavBtnLink = styled(Link)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 8px 16px;
-  height: 100%;
-  width: 100%;
-  border: none;
-  outline: none;
 `;

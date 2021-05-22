@@ -9,8 +9,8 @@ function Home() {
       <Programs {...programsObj}/>
       <Statistics {...statisticsObjOne} />
       <Statistics {...statisticsObjTwo} />
-      <Partner {...partnerObj}/>
       <Community {...communityObj}/>
+      <Partner {...partnerObj}/>
       <Information {...infoObj}/>
     </>
   );

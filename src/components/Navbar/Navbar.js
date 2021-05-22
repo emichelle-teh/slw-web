@@ -1,7 +1,6 @@
 import React, { useState, useEffect, memo } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import { Button1 } from '../../globalStyles';
 import {
   Nav,
   NavbarContainer,
@@ -9,9 +8,7 @@ import {
   MobileIcon,
   NavMenu,
   NavItem,
-  NavItemBtn,
   NavLinks,
-  NavBtnLink
 } from './Navbar.elements';
 
 function Navbar() {
@@ -48,11 +45,6 @@ function Navbar() {
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to='/' onClick={closeMobileMenu}>
-                  Home
-                </NavLinks>
-              </NavItem>
-              <NavItem>
                 <NavLinks to='/about-us' onClick={closeMobileMenu}>
                   About Us
                 </NavLinks>
@@ -62,21 +54,16 @@ function Navbar() {
                   Community
                 </NavLinks>
               </NavItem>
-              <NavItemBtn>
-                {button ? (
-                  <NavBtnLink to='/donate'>
-                    <Button1 primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
-                      DONATE
-                    </Button1>
-                  </NavBtnLink>
-                ) : (
-                  <NavBtnLink to='/donate'>
-                    <Button1 onClick={closeMobileMenu} primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
-                      DONATE
-                    </Button1>
-                  </NavBtnLink>
-                )}
-              </NavItemBtn>
+              <NavItem>
+                <NavLinks to='/contact-us' onClick={closeMobileMenu}>
+                  Contact Us
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to='/get-involved' onClick={closeMobileMenu}>
+                  Get Involved
+                </NavLinks>
+              </NavItem>
             </NavMenu>
           </NavbarContainer>
         </Nav>

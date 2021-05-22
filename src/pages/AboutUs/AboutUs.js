@@ -1,11 +1,13 @@
 import React, {memo} from 'react';
-import { coverObj } from './Data';
-import { AboutUsCover } from '../../components';
+import { coverObj, valuesObj, storyObj } from './Data';
+import { AboutUsCover, Values, OurStory } from '../../components';
 
 function AboutUs() {
     return (
         <>
             <AboutUsCover {...coverObj}/>
+            <Values {...valuesObj}/>
+            <OurStory {...storyObj}/>
         </>
     )
 }
