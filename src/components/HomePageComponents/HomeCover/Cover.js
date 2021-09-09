@@ -1,36 +1,44 @@
-import React, {memo} from 'react';
-import { Link } from 'react-router-dom';
-import { Container, Button3 } from '../../../globalStyles';
+import React, { memo } from "react";
+import { Container, Button3 } from "../../../globalStyles";
 import {
-  CoverSec,
-  CoverColumn,
+  BaseSection,
+  BaseCover,
   TextWrapper,
-  Heading,
-  Subtitle,
-} from './Cover.elements';
+  Headline,
+  Subheadline,
+  ButtonWrapper,
+  ButtonLink,
+} from "./Cover.elements";
 
-function Cover({
-  headline,
-  description,
-  buttonLabel,
-}) {
+function Cover({ headline, subheadline, buttonLabel }) {
   return (
     <>
-      <CoverSec>
+      <BaseSection>
+        <BaseCover>
           <Container>
-              <CoverColumn>
-                <TextWrapper>
-                  <Heading>{headline}</Heading>
-                  <Subtitle>{description}</Subtitle>
-                  <Link to='/'>
-                    <Button3 primary={true} colLabel={true} btnBorder={true} btnPadding={true} fontSize={true}>
-                      {buttonLabel}
-                    </Button3>
-                  </Link>
-                </TextWrapper>
-              </CoverColumn>
+            <TextWrapper>
+              <Headline>{headline}</Headline>
+            </TextWrapper>
+            <TextWrapper>
+              <Subheadline>{subheadline}</Subheadline>
+            </TextWrapper>
+            <ButtonWrapper>
+              <ButtonLink to={"/get-involved#"}>
+                <Button3
+                  primary={true}
+                  colLabel={true}
+                  btnBorder={true}
+                  btnPadding={true}
+                  btnFontSize={true}
+                  btnWidth={true}
+                >
+                  {buttonLabel}
+                </Button3>
+              </ButtonLink>
+            </ButtonWrapper>
           </Container>
-      </CoverSec>
+        </BaseCover>
+      </BaseSection>
     </>
   );
 }

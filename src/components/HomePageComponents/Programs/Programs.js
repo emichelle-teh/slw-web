@@ -1,28 +1,76 @@
-import React, { useState, memo } from 'react';
-import CardProg from '../CardProg/CardProg';
+import React, { useState, memo } from "react";
+import { Container } from "../../../globalStyles";
 import {
-    ProgSec,
-    ProgWrapper,
-    ProgHeadline,
-    ProgSubtitle,
-    ProgContainer
-  } from './Programs.elements';
+  BaseSection,
+  Headline,
+  UnderlineContainer,
+  Underline,
+  CardContainer,
+  CardSection,
+  CardInfo,
+  CardRow,
+  CardColumn,
+  CardWrapper,
+  CardHeadline,
+  CardArrowIcon,
+  ImageContainer,
+  ImageShadow,
+  Image,
+} from "./Programs.elements";
 
-function Programs({headline, subtitle, cardsProgData}) {
-    const [cardData] = useState(cardsProgData);
-    return (
-        <>
-            <ProgSec>
-                <ProgWrapper>
-                <ProgHeadline>{headline}</ProgHeadline>
-                <ProgSubtitle>{subtitle}</ProgSubtitle>
-                <ProgContainer>
-                    <CardProg cards={cardData}/>
-                </ProgContainer>
-                </ProgWrapper>
-            </ProgSec>
-        </>
-    )
-}
+const Programs = ({ headline, programsData }) => {
+  const [cards] = useState(programsData);
+  return (
+    <>
+      <BaseSection>
+        <Container>
+          <Headline>{headline}</Headline>
+          <UnderlineContainer>
+            <Underline></Underline>
+          </UnderlineContainer>
+          <CardContainer>
+            {cards.map((programData) => {
+              const {
+                id,
+                routeLink,
+                cardHeadline,
+                iconUrl,
+                iconName,
+                imageUrl,
+                imageName,
+              } = programData;
+              return (
+                <CardSection smooth key={id} to={"/community" + routeLink}>
+                  <CardInfo>
+                    <CardRow>
+                      <CardColumn colWidth={true}>
+                        <CardWrapper>
+                          <CardHeadline>{cardHeadline}</CardHeadline>
+                          <CardArrowIcon
+                            src={iconUrl}
+                            alt={iconName}
+                          ></CardArrowIcon>
+                        </CardWrapper>
+                      </CardColumn>
+                      <CardColumn colWidth={false}>
+                        <ImageContainer>
+                          <ImageShadow></ImageShadow>
+                          <Image src={imageUrl} alt={imageName} />
+                        </ImageContainer>
+                      </CardColumn>
+                    </CardRow>
+                    <UnderlineContainer>
+                      <Underline></Underline>
+                    </UnderlineContainer>
+                  </CardInfo>
+                </CardSection>
+              );
+            })}
+          </CardContainer>
+        </Container>
+      </BaseSection>
+    </>
+  );
+};
 
 export default memo(Programs);

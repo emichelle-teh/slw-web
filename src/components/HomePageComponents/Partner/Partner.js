@@ -1,45 +1,40 @@
-import React, { useState, memo } from 'react';
-import { Link } from 'react-router-dom';
-import { Button3 } from '../../../globalStyles';
-import CardPartner from '../CardPartner/CardPartner';
+import React, { useState, memo } from "react";
+import { Container } from "../../../globalStyles";
 import {
-    BaseSection,
-    Wrapper,
-    Headline,
-    CardContainer,
-    CarouselSec,
-} from './Partner.elements';
+  BaseSection,
+  Wrapper,
+  Headline,
+  CardContainer,
+  CardBaseSection,
+  ImageContainer,
+  CardImage,
+} from "./Partner.elements";
 
-const breakPoints = [
-    { itemsToShow: 5 },
-  ];
-
-const Partner = ({ headline, buttonLabel, partnerLogo }) => {
-    const [cardData] = useState(partnerLogo);
-    return (
-        <>
-            <BaseSection>
-                <Wrapper>
-                    <Headline>{headline}</Headline>
-                    <CardContainer>
-                        <CarouselSec breakPoints={breakPoints}>
-                        {cardData.map((cardData) => {
-                            const { id, imageUrl, logoName } = cardData;
-                            return(
-                                <CardPartner id={id} imageUrl={imageUrl} logoName={logoName}/>
-                                );
-                            })}   
-                        </CarouselSec>
-                    </CardContainer>
-                    <Link to='/'>
-                        <Button3 primary={true} colLabel={true} btnBorder={false} btnPadding={true} fontSize={true}>
-                        {buttonLabel}
-                        </Button3>
-                    </Link>
-                </Wrapper>
-            </BaseSection>
-        </>
-    );
+const Partner = ({ headline, partnerLogo }) => {
+  const [cards] = useState(partnerLogo);
+  return (
+    <>
+      <BaseSection>
+        <Container>
+          <Wrapper>
+            <Headline>{headline}</Headline>
+            <CardContainer>
+              {cards.map((cardData) => {
+                const { id, imageUrl, logoName } = cardData;
+                return (
+                  <CardBaseSection key={id}>
+                    <ImageContainer>
+                      <CardImage src={imageUrl} alt={logoName}></CardImage>
+                    </ImageContainer>
+                  </CardBaseSection>
+                );
+              })}
+            </CardContainer>
+          </Wrapper>
+        </Container>
+      </BaseSection>
+    </>
+  );
 };
 
 export default memo(Partner);
